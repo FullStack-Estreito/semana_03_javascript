@@ -1,0 +1,34 @@
+.title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: deeppink;
+}
+
+/*  forma sem flexbox
+.list-posts {
+    width: 60%;
+    background-color: red;
+    margin: 0 auto;
+}
+*/
+
+.list-posts {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    list-style: none;
+
+}
+
+.list-posts li {
+    width: 40%;
+    background-color: #CCC;
+    margin: 20px 0;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
