@@ -1,0 +1,40 @@
+.card-frete {
+    width: 40%;
+    background-color: #CCC;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+    padding: 10px;
+}
+
+.card-frete input {
+    width: 20%;
+    margin: 20px;
+    color: coral;
+    border: 1px solid coral;
+    padding: 10px;
+    outline: none;
+    font-size: 18px;
+}
+
+.card-frete button {
+    background-color: coral;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+}
+
+#resultado {
+    font-size:  28px;
+    color: coral;
+    font-weight: bold;
+}

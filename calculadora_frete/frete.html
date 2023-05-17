@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="freteStyles.css" />
+</head>
+
+<body>
+    <form class="card-frete">
+        <h1>Calculadora de Frete</h1>
+
+        <input type="number" placeholder="Peso" id="peso" />
+        <input type="number" placeholder="Distância" id="distancia" />
+        <button type="button" onclick="calcularFrete()">Calcular frete</button>
+
+        <p id="resultado">Resultado</p>
+    </form>
+
+    <script>
+        function calcularFrete() {
+            var peso = document.getElementById('peso').value
+            var distancia = document.getElementById('distancia').value
+
+            var custoComPeso = peso * 0.50
+            var custoComDistancia = distancia * 0.10
+            
+            var resultado = custoComPeso + custoComDistancia
+
+            if (distancia <= 4) {
+                document.getElementById('resultado').innerHTML = "FRETE GRÁTIS"
+            } else if (distancia >= 5 && distancia <= 10) {
+                resultado = custoComPeso + 2 // 2 reais é a taxa fixa 
+                document.getElementById('resultado').innerHTML = "O Frete é " + resultado.toFixed(2)
+            } else {
+                var valorFormatado = new Intl.NumberFormat(
+                    'pt-BR', 
+                    { style: 'currency', currency: 'BRL' })
+                    .format(resultado)
+
+                document.getElementById('resultado').innerHTML = "O Frete é " + valorFormatado 
+            }
+
+            console.log("peso digitado", peso)
+            console.log("distancia digitado", distancia)
+            console.log("resultado", resultado)
+        }
+    </script>
+</body>
+
+</html>
